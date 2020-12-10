@@ -1,7 +1,7 @@
-import React, {useState, useMemo, useCallback} from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 import './Select.sass'
 
-function Selector({onChange, options, value, label}) {
+function Selector({ onChange, options, value, label }) {
     const [closed, setClosed] = useState(true)
     const [selected, setSelected] = useState(options.find(option => option.value === value))
 
@@ -23,7 +23,7 @@ function Selector({onChange, options, value, label}) {
             <div onClick={closedHandle} className="select__header">
                 <span className="select__current">{selected ? selected.label : "Выбрать"}</span>
                 <div className="select__icon">
-                    <img src="images/arrow.png" alt="стрелка"/>
+                    <img src="images/arrow.png" alt="стрелка" />
                 </div>
             </div>
             {closed ? null :
